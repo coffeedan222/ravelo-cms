@@ -4,7 +4,7 @@ const Path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: Path.resolve(__dirname, 'frontend/js/app.js'),
+  entry: Path.resolve(__dirname, 'frontend/js/app.jsx'),
   output: {
     filename: 'bundle.js',
     path: Path.resolve(__dirname, 'public/js')
@@ -16,7 +16,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.frontend\/\*\.js$/,
+        test: /\.jsx$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
