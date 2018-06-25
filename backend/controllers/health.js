@@ -1,6 +1,6 @@
 'use strict';
 
-const Package = require('../package.json');
+const Package = require('../../package.json');
 const Config = require('../lib/config');
 
 let controllers = {};

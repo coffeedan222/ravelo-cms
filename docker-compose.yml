@@ -3,14 +3,15 @@ services:
   api:
     build:
       context: ./
-      dockerfile: node.Dockerfile
+      dockerfile: backend.Dockerfile
     restart: always
     image: api-img
     container_name: api
     ports:
-      - "3001:3001"
+      - "4000:4000"
     volumes:
-      - .:/code
+      - ./backend:/code/backend
+      - ./package.json:/code/package.json
       - /code/node_modules
     links:
       - mongo
