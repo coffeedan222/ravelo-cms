@@ -8,7 +8,7 @@
       "type": "node",
       "request": "attach",
       "name": "Attach debugger to docker container",
-      "address": "api.localhost",
+      "address": "localhost",
       "port": 4000,
       "localRoot": "${workspaceFolder}",
       "remoteRoot": "/code"

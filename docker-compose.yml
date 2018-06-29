@@ -1,5 +1,20 @@
 version: "3"
 services:
+  ui:
+    build:
+      context: ./
+      dockerfile: frontend.Dockerfile
+    restart: always
+    image: ui-img
+    container_name: ui
+    volumes:
+      - ./frontend:/code/frontend
+      - ./.babelrc:/code/.babelrc
+      - ./webpack.config.js:/code/webpack.config.js
+      - ./package.json:/code/package.json
+      - /code/node_modules
+    depends_on:
+      - mongo
   api:
     build:
       context: ./
@@ -13,7 +28,7 @@ services:
       - ./backend:/code/backend
       - ./package.json:/code/package.json
       - /code/node_modules
-    links:
+    depends_on:
       - mongo
   mongo:
     container_name: mongo
@@ -32,5 +47,6 @@ services:
       - "80:80"
     volumes:
       - ./config/site.nginx.conf:/etc/nginx/conf.d/default.conf"
-    links:
+    depends_on:
       - api
+      - ui

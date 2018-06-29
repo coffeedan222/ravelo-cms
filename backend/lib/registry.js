@@ -100,7 +100,7 @@ Registry.subscribePlugins = async (server) => {
 
 Registry.subscribeArchitecturePlugins = async (server) => {
   const swaggerOptions = {
-    host: 'api.localhost',
+    host: 'localhost',
     info: {
       title: `${Package.name} API`,
       version: Package.version
