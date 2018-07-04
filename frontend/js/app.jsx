@@ -1,8 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import WelcomePage from './components/presentational/welcome-page.jsx';
+
 import '../styles/app.scss';
 
 ReactDOM.render(
-  <h1>Ravelo CMS</h1>,
+  <WelcomePage />,
   document.getElementById('ravelo-app')
 );
