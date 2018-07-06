@@ -38,7 +38,7 @@ jobs:
       # run tests!
       - run:
           name: Run unit tests
-          command: npm run test:unit
+          command: npm run docker:backend:test:unit
       - run:
           name: Run integration tests
-          command: npm run test:integration
+          command: npm run docker:backend:test:integration
