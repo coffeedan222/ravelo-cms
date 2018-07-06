@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+docker-compose build --no-cache --force-rm
 npm run docs:clean
 npm run docs:prepare
-./node_modules/.bin/jsdoc2md --files lib/**/*.js > docs/lib.md
+./node_modules/.bin/jsdoc2md --files ./backend/lib/**/*.js > docs/lib.md

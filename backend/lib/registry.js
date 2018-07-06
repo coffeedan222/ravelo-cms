@@ -5,8 +5,7 @@ const Inert = require('inert');
 const Vision = require('vision');
 const HapiSwagger = require('hapi-swagger');
 const Helpers = require('./helpers');
-const Package = require('../package.json');
-const Config = require('./config');
+const Package = require('../../package.json');
 
 /**
  * Define Registry module
@@ -100,7 +99,7 @@ Registry.subscribePlugins = async (server) => {
 
 Registry.subscribeArchitecturePlugins = async (server) => {
   const swaggerOptions = {
-    host: 'api.localhost',
+    host: 'localhost',
     info: {
       title: `${Package.name} API`,
       version: Package.version

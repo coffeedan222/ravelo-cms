@@ -5,12 +5,6 @@ You will need the following in order to be able to successfully run this reposit
 * Docker version 18.03.1-ce, build 9ee9f40
 * Visual Studio Code
 
-You will need to also update your hosts file by adding the following
-
-```
-127.0.0.1 api.localhost
-```
-
 # How to contribute to this project
 
 1. Make sure you have you have your ssh keys setup.
@@ -25,7 +19,7 @@ You will need to also update your hosts file by adding the following
     npm run server:start
     ```
     NOTE: run `npm run server:shutdown` to stop server
-5. You should be able to go to `http://api.localhost` and see the api running.
+5. You should be able to go to `http://localhost` and see the app running.
 
 # How to Pull the latest changes to your fork
 

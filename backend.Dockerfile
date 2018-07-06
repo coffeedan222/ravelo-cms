@@ -8,7 +8,8 @@ WORKDIR /code
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
-ADD ./ /code
+ADD ./backend /code
+ADD ./package.json /code
 
 RUN npm install
 # If you are building your code for production
@@ -17,4 +18,4 @@ RUN npm install
 # Bundle app source
 
 EXPOSE 3000
-CMD [ "npm", "run", "dev" ]
+CMD [ "npm", "run", "docker:backend:dev" ]
