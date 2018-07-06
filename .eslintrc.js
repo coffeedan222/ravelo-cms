@@ -1,6 +1,6 @@
-module.exports = {
-  "parserOptions": {
-    "ecmaVersion": 8,
-    "sourceType": "module"
-  }
-};
+// module.exports = {
+//   "parserOptions": {
+//     "ecmaVersion": 8,
+//     "sourceType": "module"
+//   }
+// };

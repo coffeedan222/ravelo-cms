@@ -6,7 +6,6 @@ const Vision = require('vision');
 const HapiSwagger = require('hapi-swagger');
 const Helpers = require('./helpers');
 const Package = require('../../package.json');
-const Config = require('./config');
 
 /**
  * Define Registry module

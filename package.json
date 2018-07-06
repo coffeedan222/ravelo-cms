@@ -7,7 +7,7 @@
     "docker:backend:dev": "NODE_ENV=development ./node_modules/.bin/nodemon --inspect=0.0.0.0:4000 ./backend/server.js",
     "docker:backend:test": "./node_modules/.bin/lab ./backend/test",
     "docker:backend:tdd": "./node_modules/.bin/nodemon ./node_modules/.bin/lab ./backend/test",
-    "docker:backend:test:unit": "./node_modules/.bin/lab test/unit",
+    "docker:backend:test:unit": "./node_modules/.bin/lab ./backend/test/unit",
     "docker:backend:test:integration": "./node_modules/.bin/lab ./backend/test/integration",
     "docker:frontend:dev": "./node_modules/.bin/webpack-dev-server --public --mode development",
     "docker:frontend:build": "./node_modules/.bin/webpack --mode production",
